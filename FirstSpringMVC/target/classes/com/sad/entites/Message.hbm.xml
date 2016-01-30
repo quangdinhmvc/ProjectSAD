@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 21, 2016 9:59:44 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.sad.entites.Message" table="message" catalog="test" optimistic-lock="version">
+        <id name="messageId" type="int">
+            <column name="messageID" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="account" class="com.sad.entites.Account" fetch="select">
+            <column name="account" length="45" not-null="true" />
+        </many-to-one>
+        <many-to-one name="productdetail" class="com.sad.entites.Productdetail" fetch="select">
+            <column name="id" not-null="true" />
+        </many-to-one>
+        <property name="messageNameCompare" type="string">
+            <column name="messageNameCompare" length="1000" />
+        </property>
+        <property name="messageDetail" type="string">
+            <column name="messageDetail" length="1000" />
+        </property>
+        <property name="timeMessage" type="timestamp">
+            <column name="timeMessage" length="19" />
+        </property>
+    </class>
+</hibernate-mapping>

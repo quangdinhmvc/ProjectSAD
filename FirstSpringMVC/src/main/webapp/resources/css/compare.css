@@ -1,0 +1,70 @@
+#content-compare{
+	width: 40px !important ;
+	height:40px !important;
+	text-align:center;
+}
+table td{
+	height:0px !important;
+}
+#table-compare td{
+
+}
+#image-compare{
+	height:100px !important;
+	text-align:center;
+	background: #c0c0c0;
+}
+#compare{
+	width: 10% !important ;
+	height:30px !important;
+	text-align:center;
+	background: #c0c0c0;
+}
+#evalute{
+	border: none !important;
+	
+}
+#table-compare{ table-layout: fixed; width: 120%; }
+
+td{
+	border: none !important;
+	width: auto;
+	
+}
+#evalute{
+	table-layout: fixed; width: 100%;
+}
+#content-evalute{
+	float:left;
+	margin-left:15px;
+	margin-bottom:5px;
+	margin-top:5px;
+}
+#comment{
+	 border-radius: 10px;
+	 border-color: #c0c0c0;
+}
+#txtcomment{
+	background-color: white !important;
+	color:black;
+	width: 100%;
+	height: 100%;
+	text-align: left;
+	 display: inline-block;
+}
+#comparename{
+	width: 95%;
+	height: 15px;
+	float: left;
+	background-color:blue; 
+	font-weight: bold;
+	padding-left:5%;
+	
+}
+#comparedetail{
+	width: 100%;
+	height: 40px;
+	float: left;
+	background-color:red;
+	padding-top: 10px; 
+}

@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 21, 2016 9:59:44 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.sad.entites.Productdetail" table="productdetail" catalog="test" optimistic-lock="version">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <property name="name" type="string">
+            <column name="name" length="45" />
+        </property>
+        <property name="brand" type="string">
+            <column name="brand" length="45" />
+        </property>
+        <property name="screen" type="string">
+            <column name="screen" length="45" />
+        </property>
+        <property name="generation" type="string">
+            <column name="generation" length="45" />
+        </property>
+        <property name="hdd" type="java.lang.Integer">
+            <column name="hdd" />
+        </property>
+        <property name="price" type="java.lang.Integer">
+            <column name="price" />
+        </property>
+        <property name="imageLink" type="string">
+            <column name="imageLink" />
+        </property>
+        <property name="vga" type="string">
+            <column name="vga" length="45" />
+        </property>
+        <property name="ram" type="string">
+            <column name="ram" length="45" />
+        </property>
+        <property name="os" type="string">
+            <column name="os" length="45" />
+        </property>
+        <property name="weight" type="java.lang.Integer">
+            <column name="weight" />
+        </property>
+        <property name="pin" type="java.lang.Integer">
+            <column name="pin" />
+        </property>
+        <property name="nowater" type="java.lang.Boolean">
+            <column name="nowater" />
+        </property>
+        <property name="touch" type="java.lang.Boolean">
+            <column name="touch" />
+        </property>
+        <property name="onestart" type="java.lang.Integer">
+            <column name="onestart" />
+        </property>
+        <property name="twostart" type="java.lang.Integer">
+            <column name="twostart" />
+        </property>
+        <property name="threestart" type="java.lang.Integer">
+            <column name="threestart" />
+        </property>
+        <property name="fourstart" type="java.lang.Integer">
+            <column name="fourstart" />
+        </property>
+        <property name="sumstart" type="java.lang.Integer">
+            <column name="sumstart" />
+        </property>
+        <set name="messages" table="message" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="id" not-null="true" />
+            </key>
+            <one-to-many class="com.sad.entites.Message" />
+        </set>
+    </class>
+</hibernate-mapping>

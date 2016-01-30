@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 21, 2016 9:59:44 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.sad.entites.Account" table="account" catalog="test" optimistic-lock="version">
+        <id name="account" type="string">
+            <column name="account" length="45" />
+            <generator class="assigned" />
+        </id>
+        <property name="password" type="string">
+            <column name="password" length="45" not-null="true" />
+        </property>
+        <property name="fullname" type="string">
+            <column name="fullname" not-null="true" />
+        </property>
+        <property name="isAdmin" type="boolean">
+            <column name="isAdmin" not-null="true" />
+        </property>
+        <property name="imageAcc" type="string">
+            <column name="imageAcc" />
+        </property>
+        <set name="messages" table="message" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="account" length="45" not-null="true" />
+            </key>
+            <one-to-many class="com.sad.entites.Message" />
+        </set>
+    </class>
+</hibernate-mapping>
